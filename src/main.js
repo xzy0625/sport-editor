@@ -17,6 +17,7 @@ export async function run(config) {
 }
 
 function getRamdomStep(step_size = DEFAULT_STEP_SIZE) {
+  log.info(`步数范围: ${step_size}`);
   if (!step_size.includes("-")) throw new Error("步数范围格式异常");
 
   const temp = step_size.split("-");
